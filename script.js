@@ -67,6 +67,51 @@ const combinedArr = [...arr1, ...arr2];
 console.log(combinedArr); // Output: [1, 2, 3, 4, 5, 6]
 Inside the userData object create a songs property.
 For the value, spread allSongs into an array.
+
+
+**Step 10
+To handle the current song's information and track its playback time,
+create a currentSong and songCurrentTime properties.
+Set the values to null and 0 respectively.
+
+
+**Step 11
+In the previous projects, you used regular functions.
+But in the rest of the projects, you will be working with arrow functions.
+The next few steps will focus on teaching you the basics of arrow functions.
+An arrow function is an anonymous function expression and a shorter way to write functions.
+Anonymous means that the function does not have a name. Arrow functions are always anonymous.
+Here is the basic syntax:
+Example Code
+() => {}
+To create a named arrow function, you can assign the function to a variable:
+Example Code
+const exampleFunction = () => {
+  // code goes here
+}
+Create a new named arrow function called printGreeting.
+Inside the body of that function use the console.log() method to print the string "Hello there!".
+
+
+**Step 13
+Just like regular functions, arrow functions can accept multiple parameters.
+Here is an example of a named arrow function with one parameter:
+Example Code
+const greet = (name) => {
+  console.log(`Hello, ${name}!`);
+};
+If the function only has one parameter, you can omit the parentheses around the parameter
+list like this:
+Example Code
+const greet = name => {
+  console.log(`Hello, ${name}!`);
+};
+Create a new named arrow function called printMessage that has one parameter called org.
+Inside the body of that function, add a console statement.
+Inside that console statement, add the template literal ${org} is awesome!.
+Below your printMessage function, call the function and pass in the string "freeCodeCamp"
+as an argument.
+Open up the console to see the result.
 */
 
 const playlistSongs = document.getElementById("playlist-songs");
@@ -100,6 +145,19 @@ const allSongs = [
 ];
 
 const audio = new Audio();
-let userData = {
 
+let userData = {
+    songs: [...allSongs],
+    currentSong: null,
+    songCurrentTime: 0,
 };
+
+const printGreeting = () => {
+    console.log("Hello there!");
+  };
+printGreeting();
+
+const printMessage = (org) => {
+    console.log(`${org} is awesome!`);
+  }
+printMessage("freeCodeCamp");
