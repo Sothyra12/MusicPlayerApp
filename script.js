@@ -131,6 +131,25 @@ const getTax = (price) => {
 Refactor, or update, your addTwoNumbers function to remove the return keyword and the curly braces {}.
 Your addTwoNumbers function should instead use an implicit return.
 Open up the console to make sure that you are still getting the correct output.
+
+
+**Step 16
+Now it is time to apply what you have learned about arrow functions to your music player project.
+Start by removing the printGreeting, printMessage, and addTwoNumbers functions.
+Also, remove all of the console statements and function calls.
+
+
+**Step 17
+To display the songs in the UI (User Interface), you'll need to create a function.
+Use the arrow function syntax to create a renderSongs function that takes in array as its parameter.
+
+
+Step 18
+When the songs are displayed on the page, it should show the title, artist,
+duration of each song and a delete button.
+In the next few steps, you will learn how to add new HTML for each song using the map() method.
+This method will be explained in more detail in the next step.
+Start by using const to declare a variable named songsHTML and assign it array.map().
 */
 
 const playlistSongs = document.getElementById("playlist-songs");
@@ -171,22 +190,27 @@ let userData = {
     songCurrentTime: 0,
 };
 
-const printGreeting = () => {
-    console.log("Hello there!");
-  };
-printGreeting();
-
-const printMessage = (org) => {
-    console.log(`${org} is awesome!`);
-  }
-printMessage("freeCodeCamp");
+const renderSongs = (array) => {
+    const songsHTML = array.map();
+}
 
 
-const addTwoNumbers = (num1, num2) => {
-    return num1 + num2;
-  }
+// const printGreeting = () => {
+//     console.log("Hello there!");
+//   };
+// printGreeting();
 
-console.log(addTwoNumbers(3,4));
+// const printMessage = (org) => {
+//     console.log(`${org} is awesome!`);
+//   }
+// printMessage("freeCodeCamp");
 
-const addTwoNumber = (num1, num2) => num1 + num2;
-console.log(addTwoNumber(5,6));
+
+// const addTwoNumbers = (num1, num2) => {
+//     return num1 + num2;
+//   }
+
+// console.log(addTwoNumbers(3,4));
+
+// const addTwoNumber = (num1, num2) => num1 + num2;
+// console.log(addTwoNumber(5,6));
