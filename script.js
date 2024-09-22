@@ -174,6 +174,14 @@ Inside the map(), add a return statement with backticks where you will
 interpolate all the elements responsible to displaying the song details.
 Inside the backticks, create an li element with an id attribute of song-${song.id}
 and a class attribute of playlist-song
+
+
+**Step 22
+Inside the button element, create two more span elements.
+The first span element should have a class of playlist-song-artist.
+In between the span tags, add ${song.artist}.
+The second span element should have a class of playlist-song-duration.
+In between the span tags, add ${song.duration}.
 */
 
 const playlistSongs = document.getElementById("playlist-songs");
@@ -216,6 +224,13 @@ let userData = {
 
 const renderSongs = (array) => {
   const songsHTML = array.map((song) => {});
+  return `<li id="song-${song.id}" class="playlist-song">
+    <button class="playlist-song-info">
+      <span class="playlist-song-title">${song.title}</span>
+      <span class="playlist-song-artist">${song.artist}</span>
+      <span class="playlist-song-duration">${song.duration}</span>
+    </button>
+  </li>`
 }
 
 
