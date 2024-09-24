@@ -199,6 +199,12 @@ Chain the join() method to your map() method and pass in an empty string for the
 To chain multiple methods together, you can call the join() method on the result of the map() method.
 For example:
 array.map().join();
+
+
+**Step 25
+Next, you will need to update the playlist in your HTML document to display the songs.
+Assign songsHTML to the innerHTML property of the playlistSongs element.
+This will insert the li element you just created into the ul element in the already providedHTML file.
 */
 
 const playlistSongs = document.getElementById("playlist-songs");
@@ -253,7 +259,7 @@ const renderSongs = (array) => {
     </button>
   </li>`;
   }).join("");
-
+  playlistSongs.innerHTML = songsHTML;
 }
 
 
