@@ -268,6 +268,36 @@ fruits.sort((a, b) => {
 In the next few steps, you will learn what each of those if statements is
 doing inside that callback function. But for now, add an empty callback function to your sort()
 method and use a and b for the parameter names.
+
+
+**Step 30
+The sort() method accepts a compare callback function that defines the sort order.
+
+In this example, the first condition (a.name < b.name) checks if the name of the first fruit is less than the name of the second fruit. If so, the first fruit is sorted before the second fruit.
+
+Strings are compared lexicographically which means they are compared character by character. For example, "Apples" is less than "Bananas" because "A" comes before "B" in the alphabet.
+
+The reason why this example is returning numbers is because the sort() method is expecting a number to be returned. If you return a negative number, the first item is sorted before the second item.
+
+Example Code
+const fruits = [  { name: "Apples", price: 0.99 },
+  { name: "Blueberries", price: 1.49 },
+  { name: "Grapes", price: 2.99 },
+];
+
+fruits.sort((a, b) => {
+  if (a.name < b.name) {
+    return -1;
+  }
+
+  if (a.name > b.name) {
+    return 1;
+  }
+
+  return 0;
+});
+Inside your callback function, add an if statement to check if a.title is less than b.title.
+If so, return -1.
 */
 
 const playlistSongs = document.getElementById("playlist-songs");
@@ -328,7 +358,11 @@ const renderSongs = (array) => {
 renderSongs(userData?.songs);
 
 const sortSongs = () => {
-  userData?.songs.sort((a,b)=> {});
+  userData?.songs.sort((a,b)=> {
+    if (a.title < b.title) {
+      return -1;
+    }
+  });
 };
 
 // const printGreeting = () => {
