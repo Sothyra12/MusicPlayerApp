@@ -330,6 +330,13 @@ method call on the userData?.songs array. Use song as the parameter of the find(
 callback and check if song.id is strictly equal to id.
 This will iterate through the userData?.songs array,
 searching for a song that corresponds to the id passed into the playSong function.
+
+
+**Step 37
+Inside the playSong function, set the audio.src property equal to song.src.
+This tells the audio element where to find the audio data for the selected song.
+Also, set the audio.title property equal to song.title. This tells the audio
+element what to display as the title of the song.
 */
 
 const playlistSongs = document.getElementById("playlist-songs");
