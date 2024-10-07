@@ -431,7 +431,12 @@ const playSong = (id) => {
   } else {
     audio.currentTime = userData?.songCurrentTime;
   }
-}
+  userData.currentSong = song;
+  playButton.classList.add("playing");
+  audio.play();
+};
+
+
 // const printGreeting = () => {
 //     console.log("Hello there!");
 //   };
@@ -451,3 +456,5 @@ const playSong = (id) => {
 
 // const addTwoNumber = (num1, num2) => num1 + num2;
 // console.log(addTwoNumber(5,6));
+
+
