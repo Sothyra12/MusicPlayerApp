@@ -444,6 +444,12 @@ playButton.addEventListener("click", () => {
     playSong(userData?.currentSong.id);
   }
 });
+
+
+const pauseSong = () => {
+  userData.songCurrentTime = audio.currentTime;
+};
+
 // const printGreeting = () => {
 //     console.log("Hello there!");
 //   };
