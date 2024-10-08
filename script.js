@@ -437,6 +437,9 @@ const playSong = (id) => {
 };
 
 
+playButton.addEventListener("click", () => {
+
+});
 // const printGreeting = () => {
 //     console.log("Hello there!");
 //   };
