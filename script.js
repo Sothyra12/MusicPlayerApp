@@ -453,6 +453,21 @@ const pauseSong = () => {
   audio.pause();
 };
 
+
+const getCurrentSongIndex = () => {
+  return userData?.songs.indexOf(userData?.currentSong);
+}
+
+
+const playNextSong = () => {
+  if (userData?.currentSong === null) {
+    playSong(userData?.songs[0].id);
+  } else {
+    const currentSongIndex = getCurrentSongIndex();
+    const nextSong = userData?.songs[currentSongIndex + 1];
+    playSong(nextSong.id);
+  }
+};
 // const printGreeting = () => {
 //     console.log("Hello there!");
 //   };
