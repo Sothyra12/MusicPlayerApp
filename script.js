@@ -445,9 +445,12 @@ playButton.addEventListener("click", () => {
   }
 });
 
+pauseButton.addEventListener("click", pauseSong);
 
 const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
+  playButton.classList.remove("playing");
+  audio.pause();
 };
 
 // const printGreeting = () => {
