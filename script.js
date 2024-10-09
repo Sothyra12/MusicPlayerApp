@@ -479,6 +479,8 @@ const playPreviousSong = () => {
     playSong(previousSong.id);
   }
 };
+
+previousButton.addEventListener("click", playPreviousSong);
 // const printGreeting = () => {
 //     console.log("Hello there!");
 //   };
